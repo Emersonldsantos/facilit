@@ -1,0 +1,98 @@
+CREATE TABLE public.convenio (
+	"﻿nr_convenio" int8,
+	id_proposta int8,
+	dia int8,
+	mes int8,
+	ano int8,
+	dia_assin_conv timestamp,
+	sit_convenio varchar(42),
+	subsituacao_conv varchar(14),
+	situacao_publicacao varchar(9),
+	instrumento_ativo varchar(3),
+	ind_opera_obtv varchar(3),
+	nr_processo varchar(20),
+	ug_emitente int8,
+	dia_publ_conv timestamp,
+	dia_inic_vigenc_conv timestamp,
+	dia_fim_vigenc_conv timestamp,
+	dia_fim_vigenc_original_conv timestamp,
+	dias_prest_contas int8,
+	dia_limite_prest_contas timestamp,
+	data_suspensiva timestamp,
+	data_retirada_suspensiva timestamp,
+	dias_clausula_suspensiva int8,
+	situacao_contratacao varchar(42),
+	ind_assinado varchar(3),
+	motivo_suspensao varchar(76),
+	ind_foto varchar(3),
+	qtde_convenios int8,
+	qtd_ta int8,
+	qtd_prorroga int8,
+	vl_global_conv numeric(13, 2),
+	vl_repasse_conv numeric(13, 2),
+	vl_contrapartida_conv numeric(11, 2),
+	vl_empenhado_conv numeric(13, 2),
+	vl_desembolsado_conv numeric(13, 2),
+	vl_saldo_reman_tesouro numeric(11, 2),
+	vl_saldo_reman_convenente numeric(11, 2),
+	vl_rendimento_aplicacao numeric(11, 2),
+	vl_ingresso_contrapartida numeric(12, 2),
+	vl_saldo_conta numeric(11, 2),
+	valor_global_original_conv numeric(12, 2)
+);
+
+
+-- Drop table
+
+-- DROP TABLE public.proposta;
+
+CREATE TABLE public.proposta (
+	"﻿id_proposta" int8,
+	uf_proponente varchar(2),
+	munic_proponente varchar(25),
+	cod_munic_ibge int8,
+	cod_orgao_sup int8,
+	desc_orgao_sup varchar(61),
+	natureza_juridica varchar(53),
+	nr_proposta varchar(8),
+	dia_prop int8,
+	mes_prop int8,
+	ano_prop int8,
+	dia_proposta timestamp,
+	cod_orgao int8,
+	desc_orgao varchar(61),
+	modalidade varchar(19),
+	identif_proponente int8,
+	nm_proponente varchar(101),
+	cep_proponente int8,
+	endereco_proponente varchar(125),
+	bairro_proponente varchar(16),
+	nm_banco varchar(23),
+	situacao_conta varchar(11),
+	situacao_projeto_basico varchar(14),
+	sit_proposta varchar(55),
+	dia_inic_vigencia_proposta timestamp,
+	dia_fim_vigencia_proposta timestamp,
+	objeto_proposta varchar(3811),
+	item_investimento bool,
+	enviada_mandataria varchar(13),
+	nome_subtipo_proposta bool,
+	descricao_subtipo_proposta bool,
+	vl_global_prop numeric(13, 2),
+	vl_repasse_prop numeric(13, 2),
+	vl_contrapartida_prop numeric(12, 2)
+);
+
+
+CREATE TABLE public.municipios (
+	codigo_ibge int8,
+	nome varchar(220),
+	latitude varchar(220),
+	longitude varchar(220),
+	capital int8,
+	codigo_uf int8,
+	siafi_id int8,
+	ddd int8,
+	fuso_horario varchar(190)
+);
+
